@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative max-w-[1080px] mx-auto px-4 py-4">
+    <nav className="relative max-w-[1080px] mx-auto px-4 py-4 border-b-[2px] border-[var(--colour-gray)]">
       <div className="flex items-center justify-between">
         {/* Brand / Logo */}
         <Links href="/">
@@ -44,7 +44,10 @@ export default function Navbar() {
           className="md:hidden p-1 text-[var(--colour-front)]"
         >
           {isOpen ? (
-            <svg className="w-6 h-6 fill-none stroke-current" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 fill-none stroke-current"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -53,7 +56,10 @@ export default function Navbar() {
               />
             </svg>
           ) : (
-            <svg className="w-6 h-6 fill-none stroke-current" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 fill-none stroke-current"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -67,10 +73,11 @@ export default function Navbar() {
 
       {/* Animated Mobile Dropdown Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full z-50 bg-[var(--colour-back)] grid transition-all duration-300 ease-in-out ${isOpen
-          ? "grid-rows-[1fr] opacity-100"
-          : "grid-rows-[0fr] opacity-0 pointer-events-none"
-          }`}
+        className={`md:hidden absolute top-full left-0 w-full z-50 bg-[var(--colour-back)] grid transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0 pointer-events-none"
+        }`}
       >
         <div className="overflow-hidden">
           <div className="px-4 py-4 flex flex-col gap-4">

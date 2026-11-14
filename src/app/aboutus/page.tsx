@@ -4,32 +4,34 @@ import H from "@/components/text/H";
 import Footer from "@/components/section/Footer";
 import SubFooter from "@/components/section/SubFooter";
 import NavBar from "@/components/section/NavBar";
+import AboutUsSection from "@/components/section/aboutus/Aboutus";
 
 export default function AboutUs() {
-    return (
-        <div>
-            {/* header */}
-            <Section colour="--colour-front">  {/*reuseable container*/}
-                <TopInfo />   {/* //top info email,phone,socialmedia */}
-            </Section>
+  return (
+    <div>
+      {/* header */}
+      <Section colour="--colour-front">
+        {" "}
+        {/*reuseable container*/}
+        <TopInfo /> {/* //top info email,phone,socialmedia */}
+      </Section>
 
-            <Section colour="--colour-back">
-                <NavBar />
-            </Section>
+      <Section colour="--colour-back">
+        <NavBar />
+      </Section>
 
-            <Section colour="--colour-blue">
-                <H>AboutUs</H>
-            </Section>
+      <Section colour="--colour-back">
+        <AboutUsSection />
+      </Section>
 
-            {/* footer */}
-            <Section colour="--colour-gray" className="text-[var(--colour-back)]">
-                <Footer />
-            </Section>
+      {/* footer */}
+      <Section colour="--colour-gray" className="text-[var(--colour-back)]">
+        <Footer />
+      </Section>
 
-            <Section colour="--colour-back" >
-                <SubFooter />
-            </Section>
-
-        </div >
-    );
+      <Section colour="--colour-back">
+        <SubFooter />
+      </Section>
+    </div>
+  );
 }

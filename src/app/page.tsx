@@ -4,18 +4,20 @@ import Footer from "@/components/section/Footer";
 import SubFooter from "@/components/section/SubFooter";
 import NavBar from "@/components/section/NavBar";
 import Marquee from "@/components/section/Marquee";
-import Stats from "@/components/section/Stats";
-import Main from "@/components/section/Main";
-import ContactS from "@/components/section/ContactS";
-import Process from "@/components/section/Process";
-import Products from "@/components/section/Products";
+import Stats from "@/components/section/home/Stats";
+import Main from "@/components/section/home/MainHome";
+import ContactS from "@/components/section/home/ContactS";
+import Process from "@/components/section/home/Process";
+import Products from "@/components/section/home/Products";
 
 export default function Home() {
   return (
     <div>
       {/* header */}
-      <Section colour="--colour-front">  {/*reuseable container*/}
-        <TopInfo />   {/* //top info email,phone,socialmedia */}
+      <Section colour="--colour-front">
+        {" "}
+        {/*reuseable container*/}
+        <TopInfo /> {/* //top info email,phone,socialmedia */}
       </Section>
 
       <Section colour="--colour-back">
@@ -28,7 +30,19 @@ export default function Home() {
       </Section>
 
       <Section colour="--colour-front">
-        <Marquee data={["Inventory Software", "ERP", "Websites", "Mobile Apps", "Desktop Software", "Online Stores", "Graphic Design", "Management Software", "Restaurant Software",]} />
+        <Marquee
+          data={[
+            "Inventory Software",
+            "ERP",
+            "Websites",
+            "Mobile Apps",
+            "Desktop Software",
+            "Online Stores",
+            "Graphic Design",
+            "Management Software",
+            "Restaurant Software",
+          ]}
+        />
       </Section>
 
       <Section colour="--colour-back">
@@ -44,7 +58,15 @@ export default function Home() {
       </Section>
 
       <Section colour="--colour-front">
-        <Marquee data={["KRM", "LUXLOOM", "Frame Craft Studio", "Lotaxy", "Vedyak Health Care"]} />
+        <Marquee
+          data={[
+            "KRM",
+            "LUXLOOM",
+            "Frame Craft Studio",
+            "Lotaxy",
+            "Vedyak Health Care",
+          ]}
+        />
       </Section>
 
       <Section colour="--colour-back">
@@ -56,10 +78,9 @@ export default function Home() {
         <Footer />
       </Section>
 
-      <Section colour="--colour-back" >
+      <Section colour="--colour-back">
         <SubFooter />
       </Section>
-
-    </div >
+    </div>
   );
 }
